@@ -22,7 +22,7 @@
           </li>
           <li><a href="">Tutoriales</a></li>
           <li><a href="">Contacto</a></li>
-          <li><a href="">Cuentas</a>
+          <li><a href="">Apartados</a>
           <ul>
               <li><a href="PaginaUsuario.jsp">Usuarios</a></li>
               <li><a href="PaginaCliente.jsp">Clientes</a></li>
@@ -30,7 +30,8 @@
               <li><a href="PaginaProductos.jsp">Productos</a></li>
               <li><a href="PaginaVentas.jsp">Ventas</a></li>
               <li><a href="PaginaReportes.jsp">Reportes</a></li>
-            </ul> 
+            </ul>
+            <li><a href="Login.jsp">Salir</a></li>
           </li>
           
         </ul>

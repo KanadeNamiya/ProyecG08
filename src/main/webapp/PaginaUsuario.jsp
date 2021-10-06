@@ -9,6 +9,7 @@
 <title>Pagina Usuarios</title>
 </head>
 <header>
+<div class="animation start-home"><a href="PaginaInicio.jsp" class="nav-item">Volver</a></div>
 <div class="logo"><img src="IMG/TBMBanner.jpg" alt="TBM" class="logo"></div>
 	<nav>
 		<a href="PaginaUsuario.jsp" class="nav-item">Usuario</a>

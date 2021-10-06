@@ -9,6 +9,7 @@
 <title>Pagina Productos</title>
 </head>
 <header>
+<div class="animation start-home"><a href="PaginaInicio.jsp" class="nav-item">Volver</a></div>
 <div class="logo"><img src="IMG/TBMBanner.jpg" alt="TBM" class="logo"></div>
 	<nav>
 		<a href="PaginaUsuario.jsp" class="nav-item">Usuarios</a>
@@ -16,7 +17,7 @@
 		<a href="PaginaProveedores.jsp" class="nav-item">Proveedores</a>
 		<a href="PaginaProductos.jsp" class="nav-item">Productos</a>
 		<a href="PaginaVentas.jsp" class="nav-item">Ventas</a>
-		<a href="PaginaReportes.jsp" class="nav-item">Reportes</a>
+		
 		<div class="animation start-home"></div>
 	</nav>	
 	
