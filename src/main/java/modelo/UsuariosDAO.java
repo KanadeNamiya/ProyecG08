@@ -83,5 +83,25 @@ public class UsuariosDAO {
 		return x;
 	}
 	
+	public UsuariosDTO loginUno(UsuariosDTO cod) {
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM usuarios WHERE password=? and usuario=?");
+			ps.setString(1, cod.getUsuario());	
+			ps.setString(2, cod.getPassword());
+			rs=ps.executeQuery();
+			if(rs.next()) {
+				usdto=new UsuariosDTO(rs.getString(4), rs.getString(5));
+			}
+			else {
+				return null;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	return usdto;
+	}
+	
 	
 }

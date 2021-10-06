@@ -18,7 +18,7 @@
   <form action="controladorlogin" method="post" id="login-form">
     <input type="text" name="user" placeholder="Usuario" required="" id="username" />
     <input type="password" name="password" placeholder="Contraseña" required="" id="password" />
-    <input type="submit" class="login-btn" value="Ingresar">
+    <input type="submit" name="BtnLoging" class="login-btn" value="Ingresar">
   </form>
    
   

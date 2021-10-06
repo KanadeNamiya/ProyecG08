@@ -14,6 +14,16 @@ public class UsuariosDTO {
 		this.password = password;
 		this.usuario = usuario;
 	}
+	
+	
+
+	public UsuariosDTO(String password, String usuario) {
+		super();
+		this.password = password;
+		this.usuario = usuario;
+	}
+
+
 
 	public UsuariosDTO(long cedulausuario) {
 		this.cedulausuario = cedulausuario;

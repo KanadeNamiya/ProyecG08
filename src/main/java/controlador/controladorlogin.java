@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import modelo.UsuariosDAO;
+import modelo.UsuariosDTO;
+
 /**
  * Servlet implementation class controladorlogin
  */
@@ -36,18 +39,55 @@ public class controladorlogin extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String u,c;
-		u=request.getParameter("user");
-		c=request.getParameter("password");
-		if (u.equals("admininicial")&& c.equals("admin123456")) {
-			JOptionPane.showMessageDialog(null, "Bienvenido");
-			response.sendRedirect("PaginaInicio.jsp?dat="+u);
-		}
+		String password,usuario;
+		UsuariosDTO usudto;
+		UsuariosDAO usudao;
+		UsuariosDTO registro;
 		
-		else {
-			JOptionPane.showMessageDialog(null, "Datos incorrectos");
-			response.sendRedirect("Login.jsp?dat="+u);
+		
+		//salir
+		if(request.getParameter("btnsal")!=null) {
+			response.sendRedirect("Login.jsp");
+			
 			
 		}
+		//login
+		if(request.getParameter("BtnLoging")!=null) {
+		
+			u=request.getParameter("user");
+			c=request.getParameter("password");
+			if (u.equals("admininicial")&& c.equals("admin123456")) {
+				JOptionPane.showMessageDialog(null, "Bienvenido");
+				response.sendRedirect("PaginaInicio.jsp");
+			}
+			
+			else {
+				
+				usuario=request.getParameter("user");
+				password=request.getParameter("password");
+				usudto=new UsuariosDTO(usuario,password);
+				usudao=new UsuariosDAO();
+				registro=usudao.loginUno(usudto);
+				
+					if(registro!=null) {
+				response.sendRedirect("PaginaInicio.jsp");
+					}
+				
+				else {
+										
+					//JOptionPane.showMessageDialog(null, "Dato no encontrado usuario");
+					response.sendRedirect("Login.jsp");
+				}
+				
+				
+			}
+			
+			
+			
+			
+		}
+		
+		
 	}
 
 }
