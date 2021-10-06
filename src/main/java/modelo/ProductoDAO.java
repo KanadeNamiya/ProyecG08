@@ -73,7 +73,7 @@ public class ProductoDAO {
 		return x;
 		
 	}
-	public int eliminarproveedor(ProductoDTO us) {
+	public int eliminarproducto(ProductoDTO us) {
 		int x=0;
 		try {
 			ps=cnn.prepareStatement("DELETE FROM productos WHERE codigo_producto=?");

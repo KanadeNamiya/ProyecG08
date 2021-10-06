@@ -12,6 +12,8 @@ import modelo.ProductoDAO;
 import modelo.ProductoDTO;
 import modelo.ProveedoresDAO;
 import modelo.ProveedoresDTO;
+import modelo.UsuariosDAO;
+import modelo.UsuariosDTO;
 
 /**
  * Servlet implementation class Servletproductos
@@ -114,6 +116,23 @@ public class Servletproductos extends HttpServlet {
 				response.sendRedirect("PaginaProductos.jsp");
 			}
 			
+		}
+		
+		//Eliminar
+		if(request.getParameter("btnelsp")!=null) {
+			int dat;
+			codproduc=Long.parseLong(request.getParameter("codproduc"));
+			prodto=new ProductoDTO(codproduc);
+			prodao=new ProductoDAO();
+			dat=prodao.eliminarproducto(prodto);
+			if (dat>0) {
+				JOptionPane.showMessageDialog(null, "Registro eliminado");
+				response.sendRedirect("PaginaUsuario.jsp");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Registro no eliminado");
+				response.sendRedirect("PaginaUsuario.jsp");
+			}
 		}
 		
 	}
