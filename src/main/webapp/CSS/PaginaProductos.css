@@ -173,10 +173,26 @@ input:focus{
   border-color: transparent;
 }
 
+.mobile-screen{
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 600px;
+  height: 700px;
+  background: rgba(3,3,3,.7);
+  overflow: hidden;
+  left: 0%;
+  top: 500px;
+}
 
 .form-content {
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 300px;
+ 	 height: 320px;
+	left: 50%;
+  	top: 1000px;
 	text-align: right;
-	margin-right: 25%;
+	margin-right: 60%;
 }
 .labelestil{
 	color: rgba(244,244,244,.6);

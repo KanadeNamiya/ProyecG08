@@ -41,7 +41,8 @@ compra=request.getParameter("te");
 venta=request.getParameter("to");
 }
 %>
-<form action="Servletproductos" method="post">
+<div >
+<form action="Servletproductos" method="post"class="mobile-screen">
 	<div><h1>Información de Productos</h1></div>
 	
 	<div class="form-content">
@@ -77,5 +78,6 @@ venta=request.getParameter("to");
 		<input type="submit" name="btnelsp" class="btninsu" value="Eliminar Producto">
 	</div>
 </form>	
+</div>
 </body>
 </html>
