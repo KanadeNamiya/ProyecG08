@@ -41,7 +41,7 @@ public class ProductoDAO {
 			ps.setLong(1, us.getCodproducto());
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				usdto= new ProductoDTO(rs.getLong(1),rs.getDouble(2),rs.getLong(3),rs.getString(4),rs.getDouble(5),rs.getDouble(6));
+				usdto= new ProductoDTO(rs.getLong(1),rs.getLong(2),rs.getLong(3),rs.getString(4),rs.getLong(5),rs.getLong(6));
 			}
 			else {
 				return null;
@@ -57,13 +57,13 @@ public class ProductoDAO {
 	public int actualizarproducto(ProductoDTO us) {
 		int x=0;
 		try {
-			ps=cnn.prepareStatement("UPDATE productos SET ivacompra=?,nitproveedor=?,nombre_producto=?,precio_compra=?,precio_venta=? WHERE codigo_producto=?");
+			ps=cnn.prepareStatement("UPDATE productos SET ivacompra=?,nombre_producto=?,precio_compra=?,precio_venta=? WHERE codigo_producto=?");
 			ps.setDouble(1,us.getIva());
-			ps.setLong(2,us.getNit());
-			ps.setString(3,us.getNombrep());
-			ps.setDouble(4,us.getCompra());
-			ps.setDouble(5,us.getVenta());
-			ps.setLong(1,us.getCodproducto());
+			
+			ps.setString(2,us.getNombrep());
+			ps.setDouble(3,us.getCompra());
+			ps.setDouble(4,us.getVenta());
+			ps.setLong(5,us.getCodproducto());
 			x=ps.executeUpdate();
 			
 		} catch (SQLException e) {

@@ -25,18 +25,20 @@
 <%
 conexion cn=new conexion();
 cn.conexionbd();
+String codproduc="";
+String iva="";
 String nit="";
-String ciudad="";
-String direccion="";
-String nombre="";
-String telefono="";
+String nompro="";
+String compra="";
+String venta="";
 
 if(request.getParameter("ni")!=null){
-nit=request.getParameter("ni");
-ciudad=request.getParameter("ci");
-direccion=request.getParameter("di");
-nombre=request.getParameter("no");
-telefono=request.getParameter("te");
+codproduc=request.getParameter("ni");
+iva=request.getParameter("ci");
+nit=request.getParameter("di");
+nompro=request.getParameter("no");
+compra=request.getParameter("te");
+venta=request.getParameter("to");
 }
 %>
 <form action="Servletproductos" method="post">
@@ -45,27 +47,27 @@ telefono=request.getParameter("te");
 	<div class="form-content">
 		<div>
 			<label class="labelestil" for="cedula">Codigo Producto:</label>
-			<input type="number" id="nit" value="<%=nit %>" required="" name="nit"/>
+			<input type="number" id="nit" value="<%=codproduc %>" required="" name="codproduc"/>
 		</div>
 		<div>
 			<label class="labelestil" for="nombreusuario">Iva Compra:</label>
-			<input type="text" id="nombre" value="<%=nombre %>" name="nombre">
+			<input type="text" id="nombre" value="<%=iva %>" name="iva">
 		</div>
 		<div>
 			<label class="labelestil" for="email">Nit Proveedor:</label>
-			<input type="text" id="ciudad" value="<%=ciudad %>" name="ciudad">
+			<input type="text" id="ciudad" value="<%=nit %>" name="nit">
 		</div>
 		<div>
 			<label class="labelestil" for="usuario">Nombre Producto:</label>
-			<input type="text" id="direccion" value="<%=direccion %>" name="direccion">
+			<input type="text" id="direccion" value="<%=nompro %>" name="nompro">
 		</div>
 		<div>
 			<label class="labelestil" for="password">Precio Compra:</label>
-			<input type="text" id="telefono" value="<%=telefono %>" name="telefono">
+			<input type="text" id="telefono" value="<%=compra %>" name="compra">
 		</div>
 		<div>
 			<label class="labelestil" for="password">Precio Venta:</label>
-			<input type="text" id="telefono" value="<%=telefono %>" name="telefono">
+			<input type="text" id="telefono" value="<%=venta %>" name="venta">
 		</div>
 	</div>
 	<div>
