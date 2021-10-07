@@ -17,7 +17,6 @@
 		<a href="PaginaProductos.jsp" class="nav-item">Productos</a>
 		<a href="PaginaVentas.jsp" class="nav-item">Ventas</a>
 		<a href="PaginaReportes.jsp" class="nav-item">Reportes</a>
-		
 		<div class="animation start-home"></div>
 	</nav>	
 	
