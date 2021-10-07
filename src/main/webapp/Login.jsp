@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="CSS/Login2.css" type="text/css" rel="stylesheet" />
-<title>Iniciar sesion</title>
+<title>Iniciar sesio</title>
 </head>
 <body>
 <div class="mobile-screen">
