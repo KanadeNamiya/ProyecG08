@@ -1,6 +1,27 @@
 @charset "utf-8";
 
 
+nav {
+	margin: 0px auto 0;
+	position: relative;
+	width: 620px;
+	height: 45px;
+	border-radius: 8px solid #c4c6ca;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgb(252, 252, 252);
+	cursor: pointer;
+}
 nav .animation {
 	position: absolute;
 	height: 100%;
@@ -8,6 +29,55 @@ nav .animation {
 	z-index: 0;
 	transition: all .5s ease 0s;
 	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 100px;
+}
+a:nth-child(3) {
+	width: 120px;
+}
+a:nth-child(4) {
+	width: 120px;
+}
+a:nth-child(5) {
+	width: 100px;
+}
+a:nth-child(6) {
+	width: 100px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0px;
+	background-color: rgba(93, 93, 89, 1);
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 100px;
+	left: 100px;
+	background-color: rgba(93, 93, 89, 1);
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 120px;
+	left: 200px;
+	background-color: rgba(93, 93, 89, 1);
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 120px;
+	left: 320px;
+	background-color: rgba(93, 93, 89, 1);
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 100px;
+	left: 440px;
+	background-color: rgba(93, 93, 89, 1);
+}
+nav .start-contact, a:nth-child(6):hover~.animation {
+	width: 100px;
+	left: 540px;
+	background-color: rgba(93, 93, 89, 1);
 }
 
 body {
@@ -29,10 +99,6 @@ h1 {
 	text-shadow: 3px 3px 5px #000000;
 	font-family: 'Cherry Swash', cursive;
 }
-*{
-  margin: 0;
-  padding: 0;
-}
 header {
 
   background-color: #000000;
@@ -53,6 +119,7 @@ header {
   height: auto;
 }
 form{
+  margin: auto;
   width: 43%;
   height: 500px;
   background: rgba(3,3,3,.7);
@@ -106,36 +173,27 @@ input:focus{
   border-color: transparent;
 }
 
+.mobile-screen{
+  position: absolute;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 600px;
+  height: 600px;
+  background: rgba(3,3,3,.7);
+  overflow: hidden;
+  left: 0%;
+  top: 500px;
+}
 
 .form-content {
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 300px;
+ 	 height: 320px;
+	left: 50%;
+  	top: 1000px;
 	text-align: right;
-	margin-right: 25%;
+	margin-right: 60%;
 }
 .labelestil{
 	color: rgba(244,244,244,.6);
-}
-ul{
-  list-style: none;
-}
-#menu li>a{
-  background-color: grey;
-  color: white;
-  padding: 10px;
-  display: block;
-  text-decoration: none;
-  min-width: 100px;
-}
-#menu li>a:hover{
-  color: #000;
-  background-color: #eaeaea;
-}
-#menu>li{
-  float: left;
-  text-align:center
-}
-#menu>li>ul{
-  display: none;
-}
-#menu>li:hover>ul {
-  display:block;
 }

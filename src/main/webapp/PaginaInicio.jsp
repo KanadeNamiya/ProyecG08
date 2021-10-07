@@ -10,42 +10,16 @@
 </head>
 <header>
 <div class="logo"><img src="IMG/TBMBanner.jpg" alt="TBM" class="logo"></div>
-      <nav>
-        <ul id="menu">
-          <li><a href="">Inicio</a></li>
-          <li><a href="">Cursos</a>
-            <ul>
-              <li><a href="">Frontend</a></li>
-              <li><a href="">Backend</a></li>
-              <li><a href="">Mobile</a></li>
-            </ul>  
-          </li>
-          <li><a href="">Tutoriales</a></li>
-          <li><a href="">Contacto</a></li>
-          <li><a href="">Apartados</a>
-          <ul>
-              <li><a href="PaginaUsuario.jsp">Usuarios</a></li>
-              <li><a href="PaginaCliente.jsp">Clientes</a></li>
-              <li><a href="PaginaProveedores.jsp">Proveedores</a></li>
-              <li><a href="PaginaProductos.jsp">Productos</a></li>
-              <li><a href="PaginaVentas.jsp">Ventas</a></li>
-              <li><a href="PaginaReportes.jsp">Reportes</a></li>
-            </ul>
-            <li><a href="">Bases Datos</a>
-          <ul>
-              <li><a href="ConsultasGene.jsp">Usuarios</a></li>
-              <li><a href="">Clientes</a></li>
-              <li><a href="">Proveedores</a></li>
-              <li><a href="">Productos</a></li>
-              <li><a href="">Ventas</a></li>
-              <li><a href="">Reportes</a></li>
-            </ul>           
-          </li> 
-            <li><a href="Login.jsp">Salir</a></li>          
-          </li>
-          
-        </ul>
-      </nav>
+	<nav>
+		<a href="PaginaUsuario.jsp" class="nav-item">Usuarios</a>
+		<a href="PaginaCliente.jsp" class="nav-item">Clientes</a>
+		<a href="PaginaProveedores.jsp" class="nav-item">Proveedores</a>
+		<a href="PaginaProductos.jsp" class="nav-item">Productos</a>
+		<a href="PaginaVentas.jsp" class="nav-item">Ventas</a>
+		<a href="PaginaReportes.jsp" class="nav-item">Reportes</a>
+		
+		<div class="animation start-home"></div>
+	</nav>	
 	
 </header>
 <body>
