@@ -22,6 +22,7 @@
 	</nav>	
 	
 </header>
+
 <body>
 <%
 conexion cn=new conexion();
@@ -43,7 +44,9 @@ venta=request.getParameter("to");
 }
 %>
 <div >
+
 <form action="Servletproductos" method="post"class="mobile-screen">
+
 	<div><h1>Información de Productos</h1></div>
 	
 	<div class="form-content">
@@ -78,7 +81,24 @@ venta=request.getParameter("to");
 		<input type="submit" name="btnacsp" class="btninsu" value="Actualizar Producto">
 		<input type="submit" name="btnelsp" class="btninsu" value="Eliminar Producto">
 	</div>
+	
 </form>	
 </div>
+<form  class="archivo" action="Achivos" method="post" enctype="multipart/form-data">
+<section>
+          <fieldset>
+              <legend>Gestión Productos</legend>
+                <form >
+                    
+                    <input type="file" name="archivo" value=""placeholder="Nombre del archivo">
+                    <input type="submit" name="cargar" value="insertar" placeholder="texto">
+                    
+
+                </form>
+
+
+          </fieldset>
+</section>
+</form>	
 </body>
 </html>
