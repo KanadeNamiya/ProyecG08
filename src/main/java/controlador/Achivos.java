@@ -62,7 +62,7 @@ public class Achivos extends HttpServlet {
 				file.close();
 				escribir.close();
 				
-				JOptionPane.showMessageDialog(null, "Se cargo el archivo");
+				JOptionPane.showMessageDialog(null, "Se cargo el archivo 1");
 				
 				boolean x;
 				ProductoDAO prodao=new ProductoDAO();
