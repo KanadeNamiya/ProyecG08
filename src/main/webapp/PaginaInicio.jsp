@@ -31,7 +31,17 @@
               <li><a href="PaginaVentas.jsp">Ventas</a></li>
               <li><a href="PaginaReportes.jsp">Reportes</a></li>
             </ul>
-            <li><a href="Login.jsp">Salir</a></li>
+            <li><a href="">Bases Datos</a>
+          <ul>
+              <li><a href="ConsultasGene.jsp">Usuarios</a></li>
+              <li><a href="">Clientes</a></li>
+              <li><a href="">Proveedores</a></li>
+              <li><a href="">Productos</a></li>
+              <li><a href="">Ventas</a></li>
+              <li><a href="">Reportes</a></li>
+            </ul>           
+          </li> 
+            <li><a href="Login.jsp">Salir</a></li>          
           </li>
           
         </ul>

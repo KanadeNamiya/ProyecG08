@@ -1,12 +1,17 @@
 package controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
 
 import modelo.UsuariosDAO;
 import modelo.UsuariosDTO;
@@ -38,6 +43,7 @@ public class Servletusuario extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out=response.getWriter();
 		boolean x;
 		long cedulausuario; 
 		String emailusuario; 
@@ -124,6 +130,17 @@ public class Servletusuario extends HttpServlet {
 				response.sendRedirect("PaginaUsuario.jsp");
 			}
 		}
+		
+	
+		//consulta general
+		
+		
+	
+	 ArrayList<UsuariosDTO>lista=new ArrayList<>();
+	 usudao=new UsuariosDAO();
+	 lista=usudao.consultageneral();
+	 Gson gson=new Gson();
+	 out.print(gson.toJson(lista));
 		
 	}
 
