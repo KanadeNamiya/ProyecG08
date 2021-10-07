@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <link href="CSS/PaginaInicio.css" type="text/css" rel="stylesheet" />
-<title>Pagina Inici</title>
+<title>Pagina Inicio</title>
 </head>
 <header>
 <div class="logo"><img src="IMG/TBMBanner.jpg" alt="TBM" class="logo"></div>
