@@ -141,6 +141,21 @@ form{
   -webkit-box-sizing: border-box;
 }
 
+.btninsudos{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  display: block;
+  border-right: 5px solid;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px !important;
+  margin-top: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 input{
   width: 40%;
   height: 40px;
@@ -189,11 +204,11 @@ input:focus{
   position: absolute;
   margin: auto;
   
-  width: 300px;
-  height: 100px;
+  width: 270px;
+  height: 150px;
   background: rgb(128, 128, 128);
   overflow: hidden;
-  left: 50%;
+  left: 53%;
   top: 400px;
 }
 

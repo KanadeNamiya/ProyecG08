@@ -89,10 +89,9 @@ venta=request.getParameter("to");
           <fieldset>
               <legend>Gestión Productos</legend>
                 <form >
-                    
-                    <input type="file" name="archivo" value=""placeholder="Nombre del archivo">
+                    <input type="text" name="nomarchi" value="" placeholder="Nombre del archivo">           
                     <input type="submit" name="cargar" value="insertar" placeholder="texto">
-                    
+                    <input type="file" class="btninsudos" name="archivo" required="" value=""placeholder="Nombre del archivo">
 
                 </form>
 
