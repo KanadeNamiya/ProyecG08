@@ -10,7 +10,7 @@
 <body>
 <div class="mobile-screen">
   <div class="header">
-    <h1>Iniciar sesio</h1>
+    <h1>Iniciar sesion</h1>
   </div>
   
   <div class="logo"><img src="IMG/Logotipo.png" alt="TBM" class="logo"></div>
