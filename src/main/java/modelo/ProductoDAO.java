@@ -2,6 +2,8 @@ package modelo;
 
 import java.sql.*;
 
+import javax.swing.JOptionPane;
+
 import controlador.conexion;
 
 public class ProductoDAO {
@@ -85,6 +87,21 @@ public class ProductoDAO {
 		}
 		return x;
 
+	}
+	
+	public boolean cargarproducto(String Url) {
+		JOptionPane.showMessageDialog(null, "en dao"+Url);
+		boolean resul=false;
+		try {
+			
+			ps=cnn.prepareStatement("load data infile '"+Url+"' into table productos fields terminated by ';' lines terminated by '\r\n';");
+			resul=ps.executeUpdate()>0;
+		
+		}catch(SQLException e) {
+			
+			JOptionPane.showMessageDialog(null, "datos no cargados el archivo"+ e);	
+		}
+		return resul;
 	}
 	
 

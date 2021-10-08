@@ -141,6 +141,21 @@ form{
   -webkit-box-sizing: border-box;
 }
 
+.btninsudos{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  display: block;
+  border-right: 5px solid;
+  margin: 10px auto;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px !important;
+  margin-top: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 input{
   width: 40%;
   height: 40px;
@@ -178,11 +193,23 @@ input:focus{
   margin: auto;
   top: 0; left: 0; bottom: 0; right: 0;
   width: 600px;
-  height: 600px;
+  height: 700px;
   background: rgba(3,3,3,.7);
   overflow: hidden;
   left: 0%;
   top: 500px;
+}
+
+.archivo{
+  position: absolute;
+  margin: auto;
+  
+  width: 270px;
+  height: 150px;
+  background: rgb(128, 128, 128);
+  overflow: hidden;
+  left: 53%;
+  top: 400px;
 }
 
 .form-content {
