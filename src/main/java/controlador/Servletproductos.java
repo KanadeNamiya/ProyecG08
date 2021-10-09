@@ -67,7 +67,7 @@ public class Servletproductos extends HttpServlet {
 				response.sendRedirect("PaginaProductos.jsp");
 			}
 			else {
-				JOptionPane.showMessageDialog(null, "El producto no fue insertado");
+				JOptionPane.showMessageDialog(null, "Proveedor no encontrado");
 				response.sendRedirect("PaginaProductos.jsp");
 			}
 		}

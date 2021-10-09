@@ -51,6 +51,7 @@ public class Achivos extends HttpServlet {
 		if(request.getParameter("cargar")!=null) {
 			
 			try {
+				
 				InputStream file= archivo.getInputStream();
 				File copia= new File(Url+"archivo01.csv");
 				FileOutputStream escribir= new FileOutputStream(copia);
