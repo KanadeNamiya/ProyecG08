@@ -17,7 +17,7 @@
 		<a href="PaginaProveedores.jsp" class="nav-item">Proveedores</a>
 		<a href="PaginaProductos.jsp" class="nav-item">Productos</a>
 		<a href="PaginaVentas.jsp" class="nav-item">Ventas</a>
-		
+		<a href="PaginaReportes.jsp" class="nav-item">Reportes</a>		
 		<div class="animation start-home"></div>
 	</nav>	
 	
@@ -43,6 +43,23 @@ compra=request.getParameter("te");
 venta=request.getParameter("to");
 }
 %>
+<div>
+<form  class="archivo" action="Achivos" method="post" enctype="multipart/form-data">
+<section>
+          <fieldset>
+              <legend class="labelestil">Gestión Productos</legend>
+                <form>
+                    <input type="text" name="nomarchi" value="" placeholder="Nombre del archivo">           
+                    <input type="submit" name="cargar" value="insertar" placeholder="texto">
+                    <input type="file" class="btninsudos" name="archivo" required="" value=""placeholder="Nombre del archivo">
+
+                </form>
+
+
+          </fieldset>
+</section>
+</form>	
+</div>
 <div >
 
 <form action="Servletproductos" method="post"class="mobile-screen">
@@ -84,20 +101,6 @@ venta=request.getParameter("to");
 	
 </form>	
 </div>
-<form  class="archivo" action="Achivos" method="post" enctype="multipart/form-data">
-<section>
-          <fieldset>
-              <legend>Gestión Productos</legend>
-                <form >
-                    <input type="text" name="nomarchi" value="" placeholder="Nombre del archivo">           
-                    <input type="submit" name="cargar" value="insertar" placeholder="texto">
-                    <input type="file" class="btninsudos" name="archivo" required="" value=""placeholder="Nombre del archivo">
 
-                </form>
-
-
-          </fieldset>
-</section>
-</form>	
 </body>
 </html>

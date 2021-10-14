@@ -4,7 +4,7 @@
 nav {
 	margin: 0px auto 0;
 	position: relative;
-	width: 620px;
+	width: 640px;
 	height: 45px;
 	border-radius: 8px solid #c4c6ca;
 	font-size: 0;
@@ -189,10 +189,9 @@ input:focus{
 }
 
 .mobile-screen{
-  position: absolute;
   margin: auto;
   top: 0; left: 0; bottom: 0; right: 0;
-  width: 600px;
+  width: 800px;
   height: 700px;
   background: rgba(3,3,3,.7);
   overflow: hidden;
@@ -203,13 +202,12 @@ input:focus{
 .archivo{
   position: absolute;
   margin: auto;
-  
   width: 270px;
   height: 150px;
-  background: rgb(128, 128, 128);
+  background: rgba(3,3,3,.7);
   overflow: hidden;
   left: 53%;
-  top: 400px;
+  top: 320px;
 }
 
 .form-content {
