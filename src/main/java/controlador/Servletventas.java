@@ -193,7 +193,7 @@ public class Servletventas extends HttpServlet {
 		
 		
 		
-		int i=JOptionPane.showConfirmDialog(null,"precio por su compra sin IVA es de:"+totalsiniva+"\n"+"precio por su compra con IVA es de:"+totalconiva);
+		int i=JOptionPane.showConfirmDialog(null,"precio por su compra sin IVA es de :"+totalsiniva+"\n"+"precio por su compra con IVA es de:"+totalconiva);
 		JOptionPane.showMessageDialog(null, i);
 		if (i==0) {
 			String cedulaCliente,cedulausuario;

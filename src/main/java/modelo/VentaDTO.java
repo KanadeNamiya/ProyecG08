@@ -10,7 +10,7 @@ public class VentaDTO {
 	
        
     public VentaDTO( long cedulacliente, long cedulausuario, double iva, double totalventa,
-			double valorventa) {
+		double valorventa) {
 		
 	
 		this.cedulacliente = cedulacliente;

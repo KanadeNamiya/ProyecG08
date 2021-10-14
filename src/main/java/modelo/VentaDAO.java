@@ -21,7 +21,7 @@ public class VentaDAO {
 		int c;
 		boolean d=false;
 		try {
-			ps=cnn.prepareStatement("INSERT INTO ventas VALUES(?,?,?,?,?)");
+			ps=cnn.prepareStatement("INSERT INTO ventas VALUES(?,?,?,?,?,?)");
 			
 			ps.setDouble(2,us.getCedulacliente());
 			ps.setLong(3,us.getCedulausuario());

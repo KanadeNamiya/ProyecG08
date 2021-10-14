@@ -111,7 +111,7 @@ venta=request.getParameter("to");
 	
 	<div>
 		<input type="submit" name="total" class="btninsu" value="Enviar Venta">
-		 <input type="hidden" id="cedulausuario" value="123"  name="cedulausuario"/>
+		 <input type="hidden" id="cedulausuario" value="12"  name="cedulausuario"/>
 
 	</div>
 </form>	
