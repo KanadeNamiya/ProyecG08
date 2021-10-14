@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
 import modelo.UsuariosDAO;
@@ -38,6 +39,9 @@ public class controladorlogin extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession sesion=request.getSession();
+		
 		String u,c;
 		String password,usuario;
 		UsuariosDTO usudto;
@@ -68,9 +72,13 @@ public class controladorlogin extends HttpServlet {
 				usudto=new UsuariosDTO(usuario,password);
 				usudao=new UsuariosDAO();
 				registro=usudao.loginUno(usudto);
-				
+				String uss=usudto.getNombreusuario();
 					if(registro!=null) {
 				response.sendRedirect("PaginaInicio.jsp");
+				
+			
+				
+				sesion.setAttribute("cu",usudto);
 					}
 				
 				else {

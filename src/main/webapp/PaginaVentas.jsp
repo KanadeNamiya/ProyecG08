@@ -1,3 +1,4 @@
+<%@page import="controlador.conexion"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -22,8 +23,98 @@
 	
 </header>
 <body>
-<form>
-</form>
+<%
+
+
+conexion cn=new conexion();
+cn.conexionbd();
+String cedulacliente ="";
+String direccioncliente ="";
+String emailcliente ="";
+String nombrecliente ="";
+String telefonocliente ="";
+
+if(request.getParameter("ce")!=null){
+cedulacliente=request.getParameter("ce");
+nombrecliente=request.getParameter("nom");
+
+}
+
+
+String codproduc="";
+String iva="";
+String nit="";
+String nompro="";
+String compra="";
+String venta="";
+
+if(request.getParameter("ni")!=null){
+codproduc=request.getParameter("ni");
+iva=request.getParameter("ci");
+nit=request.getParameter("di");
+nompro=request.getParameter("no");
+compra=request.getParameter("te");
+venta=request.getParameter("to");
+}
+%>
+
+<form action="Servletventas" method="post">
+	<div><h1>Información de Ventas</h1></div>
+	
+	
+		
+			<label class="labelestil" for="cedulacliente">Cedula:</label>
+			<input type="number" id="cedulacliente" value="${vs.getCedulacliente() }" required="" name="cedulacliente"/>
+			<label class="labelestil" for="nombrecliente">Nombre:</label>
+			<input type="text" id="nombrecliente" value="${vs.getNombrecliente() }" name="nombrecliente">
+			<input type="submit" name="enviarcel" class="btninsu" value="Enviar">
+	
+			
+<table>
+		<tr>    
+			<th>Codigo</th>
+			<th>consultar Producto</th>
+			<th> Producto</th>
+			<th>Cantidad </th>
+			<th>precio de Producto</th>
+	   </tr>   
+			
+		<tr>
+		     <td><input type="number" id="codigoproducto1" value="${cp.getCodproducto() }"  name="codigoproducto1"/></td>
+		     <td><input type="submit" name="consultarProducto1" class="btninsu" value="Consultar "></td>
+		     <td><input type="text" id="producto1" value="${cp.getNombrep() }" name="producto1"/></td>
+			 <td><input type="number" id="cantidad1" name="cantidad1"/></td>
+			 <td><input type="text" id="precioproducto1" value="${cp.getVenta()}" name="precioproducto1"/></td>
+		</tr>
+			
+		<tr>
+		    <td><input type="number" id="codigoproducto2" value="${cp2.getCodproducto() }"  name="codigoproducto2"/></td>
+		    <td><input type="submit" name="consultarProducto2" class="btninsu" value="Consultar "></td>
+		    <td><input type="text" id="producto2" value="${cp2.getNombrep() }" name="producto2"/></td>
+		    <td><input type="number" id="cantidad2"  name="cantidad2"/></td>
+		    <td><input type="text" id="precioproducto2" value="${cp2.getVenta()}"  name="precioproducto2"/></td>
+	   </tr>
+			
+	   <tr>
+		    <td><input type="text" id="codigoproducto3" value="${cp3.getCodproducto() }"  name="codigoproducto3"/></td>
+		    <td><input type="submit" name="consultarProducto3" class="btninsu" value="Consultar "></td>
+		    <td><input type="text" id="producto3" value="${cp3.getNombrep() }"  name="producto3"/></td>
+			<td><input type="text" id="cantidad3"  name="cantidad3"/></td>
+			<td><input type="text" id="precioproducto3" value="${cp3.getVenta()}" name="precioproducto3"/></td>
+	  </tr> 
+			
+			
+			
+		
+		</table>
+		
+	
+	<div>
+		<input type="submit" name="total" class="btninsu" value="Enviar Venta">
+		 <input type="hidden" id="cedulausuario" value="123"  name="cedulausuario"/>
+
+	</div>
+</form>	
 
 </body>
 </html>
