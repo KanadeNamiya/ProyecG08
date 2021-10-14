@@ -1,7 +1,7 @@
 package modelo;
 
 public class VentaDTO {
-
+    private long codigoventa;
 	private long cedulacliente ;
 	private long cedulausuario ;
 	private double iva;
@@ -9,10 +9,10 @@ public class VentaDTO {
     private double valorventa;
 	
        
-    public VentaDTO( long cedulacliente, long cedulausuario, double iva, double totalventa,
+    public VentaDTO( long codigoventa,long cedulacliente, long cedulausuario, double iva, double totalventa,
 		double valorventa) {
 		
-	
+	    this.codigoventa=codigoventa;
 		this.cedulacliente = cedulacliente;
 		this.cedulausuario = cedulausuario;
 		this.iva = iva;
@@ -21,6 +21,16 @@ public class VentaDTO {
 	}
 	
 	
+	public long getCodigoventa() {
+		return codigoventa;
+	}
+
+
+	public void setCodigoventa(long codigoventa) {
+		this.codigoventa = codigoventa;
+	}
+
+
 	public long getCedulacliente() {
 		return cedulacliente;
 	}

@@ -23,7 +23,7 @@ import modelo.VentaDTO;
 public class Servletventas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	double iva1,iva2,iva3;
-	int cantidad1,cantidad2,cantidad3;
+	int cantidad1,cantidad2,cantidad3,contador=1;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -196,6 +196,11 @@ public class Servletventas extends HttpServlet {
 		int i=JOptionPane.showConfirmDialog(null,"precio por su compra sin IVA es de :"+totalsiniva+"\n"+"precio por su compra con IVA es de:"+totalconiva);
 		JOptionPane.showMessageDialog(null, i);
 		if (i==0) {
+		while (i==0) {contador=contador+1;}
+			
+			
+		
+			
 			String cedulaCliente,cedulausuario;
 			long cc,cu;
 			double iva,siniva,coniva;
@@ -207,13 +212,17 @@ public class Servletventas extends HttpServlet {
 			coniva=totalconiva;
 			cc=Long.parseLong(cedulaCliente);
 			cu=Long.parseLong(cedulausuario);
-			VentaDTO ven=new VentaDTO(cc,cu,iva,siniva,coniva);
+			VentaDTO ven=new VentaDTO(contador,cc,cu,iva,siniva,coniva);
 			VentaDAO vendao=new VentaDAO();
 			rees=vendao.insertarventa(ven);
-			if (rees) {JOptionPane.showMessageDialog(null, "Venta fue Registrada");
+			if (rees==true) {JOptionPane.showMessageDialog(null, "Venta fue Registrada");
 			response.sendRedirect("PaginaVentas.jsp");
 			
 			
+			
+			
+			}else {
+				JOptionPane.showMessageDialog(null, "El cliente no fue insertado");
 				
 			}
 			

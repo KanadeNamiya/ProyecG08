@@ -23,40 +23,7 @@
 	
 </header>
 <body>
-<%
 
-
-conexion cn=new conexion();
-cn.conexionbd();
-String cedulacliente ="";
-String direccioncliente ="";
-String emailcliente ="";
-String nombrecliente ="";
-String telefonocliente ="";
-
-if(request.getParameter("ce")!=null){
-cedulacliente=request.getParameter("ce");
-nombrecliente=request.getParameter("nom");
-
-}
-
-
-String codproduc="";
-String iva="";
-String nit="";
-String nompro="";
-String compra="";
-String venta="";
-
-if(request.getParameter("ni")!=null){
-codproduc=request.getParameter("ni");
-iva=request.getParameter("ci");
-nit=request.getParameter("di");
-nompro=request.getParameter("no");
-compra=request.getParameter("te");
-venta=request.getParameter("to");
-}
-%>
 
 <form action="Servletventas" method="post">
 	<div><h1>Información de Ventas</h1></div>

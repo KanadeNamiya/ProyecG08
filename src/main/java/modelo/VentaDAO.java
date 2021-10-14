@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 import controlador.conexion;
 
 public class VentaDAO {
@@ -20,9 +22,10 @@ public class VentaDAO {
 	public boolean insertarventa(VentaDTO us) {
 		int c;
 		boolean d=false;
+		
 		try {
 			ps=cnn.prepareStatement("INSERT INTO ventas VALUES(?,?,?,?,?,?)");
-			
+			ps.setLong(1, us.getCodigoventa());
 			ps.setDouble(2,us.getCedulacliente());
 			ps.setLong(3,us.getCedulausuario());
 			ps.setDouble(4,us.getIva());
