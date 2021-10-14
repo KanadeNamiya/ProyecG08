@@ -51,7 +51,7 @@ a:nth-child(6) {
 
 nav .start-home, a:nth-child(1):hover~.animation {
 	width: 100px;
-	left: 0px;
+	left: 100px;
 	background-color: rgba(93, 93, 89, 1);
 }
 nav .start-about, a:nth-child(2):hover~.animation {
@@ -180,4 +180,14 @@ input:focus{
 }
 .labelestil{
 	color: rgba(244,244,244,.6);
+}
+.mobile-screen{
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 700px;
+  height: 700px;
+  background: rgba(3,3,3,.7);
+  overflow: hidden;
+  left: 0%;
+  top: 500px;
 }

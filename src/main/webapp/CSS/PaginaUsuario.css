@@ -181,3 +181,13 @@ input:focus{
 .labelestil{
 	color: rgba(244,244,244,.6);
 }
+.mobile-screen{
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 700px;
+  height: 700px;
+  background: rgba(3,3,3,.7);
+  overflow: hidden;
+  left: 0%;
+  top: 500px;
+}

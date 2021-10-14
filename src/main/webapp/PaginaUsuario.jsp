@@ -39,7 +39,7 @@ password=request.getParameter("pass");
 usuario=request.getParameter("usu");
 }
 %>
-<form action="Servletusuario" method="post">
+<form action="Servletusuario" method="post" class="mobile-screen">
 	<div><h1>Información de usuario</h1></div>
 	
 	<div class="form-content">

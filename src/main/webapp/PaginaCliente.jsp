@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="ISO-8859-1"> 
 <link href="CSS/PaginaCliente.css" type="text/css" rel="stylesheet" />
 <title>Pagina Cliente</title>
 </head>
@@ -41,7 +41,7 @@ nombrecliente=request.getParameter("nom");
 telefonocliente=request.getParameter("tel");
 }
 %>
-<form action="Servletcliente" method="post">
+<form action="Servletcliente" method="post" class="mobile-screen">
 	<div><h1>Información de cliente</h1></div>
 	
 	<div class="form-content">
