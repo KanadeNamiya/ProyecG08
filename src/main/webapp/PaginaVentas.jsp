@@ -25,16 +25,16 @@
 <body>
 
 
-<form action="Servletventas" method="post">
+<form action="PruebaVenta" method="post">
 	<div><h1>Información de Ventas</h1></div>
 	
 	
 		
 			<label class="labelestil" for="cedulacliente">Cedula:</label>
-			<input type="number" id="cedulacliente" value="${vs.getCedulacliente() }" required="" name="cedulacliente"/>
+			<input type="number" id="cedulacliente" value="${cliente.getCedulacliente() }" required="" name="cedulacliente"/>
 			<label class="labelestil" for="nombrecliente">Nombre:</label>
-			<input type="text" id="nombrecliente" value="${vs.getNombrecliente() }" name="nombrecliente">
-			<input type="hidden" name="codigo" value="${cedusu.getCedulausuario()}"  >
+			<input type="text" id="nombrecliente" value="${cliente.getNombrecliente() }" name="nombrecliente">
+			
 			<input type="submit" name="enviarcel" class="btninsu" value="Enviar">
 	
 			
@@ -82,6 +82,7 @@
 		 <input type="hidden" id="cedulausuario" value="12"  name="cedulausuario"/>
 
 	</div>
+	<input type="hidden" name="codigone" value="${cedusu.getCedulausuario()}"  >
 </form>	
 
 </body>

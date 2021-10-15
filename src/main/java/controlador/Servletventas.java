@@ -56,7 +56,7 @@ public class Servletventas extends HttpServlet {
 		ClienteDAO clidao;
 		ClienteDTO clidto;
 		ClienteDTO cliregistro;
-		//hola
+		
 		
 		//Consultar cliente
 		if(request.getParameter("enviarcel")!=null) {
