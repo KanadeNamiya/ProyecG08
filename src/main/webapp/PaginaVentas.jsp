@@ -31,7 +31,7 @@
 	
 		
 		
-			<input type="text" name="cedulacliente" id="cedulacliente" value="${cliente.getCedulacliente() }" required="" placeholder="cedula"/>
+			<input type="text" name="cedulacliente" id="cedulacliente" value="${cliente.getCedulacliente() }" placeholder="cedula"/>
 			<input type="text" name="nombrecliente" id="nombrecliente" value="${cliente.getNombrecliente() }" placeholder="nombre">
 			<input type="submit" name="enviarcel" class="btninsu" value="Enviar">
 	

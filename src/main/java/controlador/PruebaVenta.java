@@ -126,12 +126,12 @@ public class PruebaVenta extends HttpServlet {
 			cant1=Integer.parseInt(request.getParameter("cantidad1"));
 			cant2=Integer.parseInt(request.getParameter("cantidad2"));
 			cant3=Integer.parseInt(request.getParameter("cantidad3"));
-			
+			JOptionPane.showMessageDialog(null, "Prueva 2");
 			tot=Double.parseDouble(request.getParameter("precioproducto1"));
 			tot1=Double.parseDouble(request.getParameter("precioproducto2"));
 			tot2=Double.parseDouble(request.getParameter("precioproducto3"));
 			
-			
+			JOptionPane.showMessageDialog(null, "Prueva 3");
 			res=cant1*tot;
 			res1=cant2*tot1;
 			res2=cant3*tot2;
@@ -163,6 +163,7 @@ public class PruebaVenta extends HttpServlet {
 			    VentaDTO ven=new VentaDTO(cc, cu, iva, tv,vv);
 			    VentaDAO vendao=new VentaDAO();
 			    ress=vendao.insertarventa(ven);
+			    JOptionPane.showMessageDialog(null, "Prueba 4");
 			    if(ress) {
 			    JOptionPane.showMessageDialog(null, "Venta registrada");
 			    int can;
@@ -236,10 +237,15 @@ public class PruebaVenta extends HttpServlet {
 			    }
 			    else {
 			    	JOptionPane.showMessageDialog(null, "Venta NO registrada");
+			    	response.sendRedirect("PaginaVentas.jsp");
 			    }
 			    	
 		  }
+		    else {
+		    	JOptionPane.showMessageDialog(null, "Error en boton");  
+		    
 		}
+	}
 		
 	}
 
