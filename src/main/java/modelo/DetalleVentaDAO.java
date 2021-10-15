@@ -30,7 +30,7 @@ public class DetalleVentaDAO {
 			ps.setLong(3, det.getCodigoventa());
 			ps.setDouble(4, det.getValortotal());
 			ps.setDouble(5, det.getValoriva());
-		ps.setDouble(6, det.getValortotal());
+		    ps.setDouble(6, det.getValortotal());
 		resultado=ps.executeUpdate()>0;
 		//}
 		}catch(SQLException ex){

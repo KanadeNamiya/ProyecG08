@@ -85,7 +85,7 @@ public class PruebaVenta extends HttpServlet {
 			
 		} 
 		
-		if(request.getParameter("codigoproducto2")!=null) {
+		if(request.getParameter("consultarProducto2")!=null) {
 			long codpro;
 			ProductoDTO listapro1;
 			codpro=Long.parseLong(request.getParameter("codigoproducto2"));
@@ -99,7 +99,7 @@ public class PruebaVenta extends HttpServlet {
 			
 			
 		} 
-		if(request.getParameter("codigoproducto3")!=null) {
+		if(request.getParameter("consultarProducto3")!=null) {
 			long codpro;
 			ProductoDTO listapro2;
 			codpro=Long.parseLong(request.getParameter("codigoproducto3"));
@@ -119,7 +119,7 @@ public class PruebaVenta extends HttpServlet {
 	
 		
 		
-		if(request.getParameter("total")!=null) {
+		if(request.getParameter("EnviarV")!=null) {
 		   double total1,total2,total3;
 		   JOptionPane.showMessageDialog(null, "Prueva 1");
 		  
