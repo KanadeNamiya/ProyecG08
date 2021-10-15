@@ -1,6 +1,7 @@
 package modelo;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 import controlador.conexion;
 
@@ -84,6 +85,21 @@ public class ClienteDAO {
 		}
 		return x;
 
+	}
+	public ArrayList<ClienteDTO> consultageneralc(){
+		ArrayList<ClienteDTO>lista=new ArrayList<ClienteDTO>();
+		try {
+			ps=cnn.prepareStatement("SELECT * FROM clientes");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				usdto=new ClienteDTO(rs.getLong(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+				lista.add(usdto);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return lista;
 	}
 	
 

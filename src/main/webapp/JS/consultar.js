@@ -10,8 +10,8 @@ $(document).ready(function(){
 	$(".btncongenedos").on("click",function(){
 	alert("boton");
 	consultageneral();	
-		
 	});
+	
 	
 function consultageneral(){
 $.ajax({
@@ -40,5 +40,6 @@ $.ajax({
   }
 });
 }
+
 	
 });

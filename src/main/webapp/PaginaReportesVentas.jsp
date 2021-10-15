@@ -18,7 +18,7 @@
 		<a href="PaginaVentas.jsp" class="nav-item">Ventas</a>
 		<a href="PaginaReportes.jsp" class="nav-item">Reportes</a>
 		
-		<div class="animation start-home"></div>
+		<div class="animation start-home"></div>v>
 	</nav>	
 	
 </header>
@@ -26,9 +26,9 @@
 <form>
 
 	<div  class="div">
-		<button type="button" name="btnusu" class="btninsu"><a href="PaginaReportesUsuarios.jsp">Listado de usuarios</a></a></button>
-		<button type="button" name="btnusu" class="btninsu"><a href="PaginaReportesClientes.jsp">Listado de clientes</a></a></button>
-		<button type="button" name="btnusu" class="btninsu"><a href="PaginaReportesVentas.jsp">Listado de ventas</a></a></button>
+		<input type="submit" name="btnusu" class="btninsu" value="Listado de usuarios">
+		<input type="submit" name="btncli" class="btninsu" value="Listado de clientes">
+		<input type="submit" name="btnvent" class="btninsu" value="Listado de ventas">
 	</div>
 </form>
 

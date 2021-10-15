@@ -1,6 +1,9 @@
 package controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,8 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
+import com.google.gson.Gson;
+
 import modelo.ClienteDAO;
 import modelo.ClienteDTO;
+import modelo.UsuariosDAO;
+import modelo.UsuariosDTO;
 
 /**
  * Servlet implementation class Servletcliente
@@ -38,6 +45,7 @@ public class Servletcliente extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out=response.getWriter();
 		boolean x;
 		long cedulacliente ;
 		String direccioncliente;
@@ -123,6 +131,18 @@ public class Servletcliente extends HttpServlet {
 			}
 			
 		}
+
+		//consulta general
+		
+		
+		
+	 ArrayList<ClienteDTO>lista=new ArrayList<>();
+	 clidao=new ClienteDAO();
+	 lista=clidao.consultageneralc();
+	 Gson gson=new Gson();
+	 out.print(gson.toJson(lista));
+		
+		
 	}
 
 }
