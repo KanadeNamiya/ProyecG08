@@ -147,7 +147,7 @@ public class PruebaVenta extends HttpServlet {
 			//JOptionPane.showMessageDialog(null,"Art1 "+res+"\n"+"Art2 "+res1+"\n"+"Art3 "+res2+"\n"+"\nIVA "+total1+"\n"+"IVA2 "+total2+"\n"+"IVA3 "+total3+"\n"+"\nTotal sin IVA  "+totalsiniva+"\n"+"TOTAL IVA "+totaliva+"\n"+"Total a pagar "+totaldesiva+"\n");
 		    
 			int i=JOptionPane.showConfirmDialog(null,"Art1 "+res+"\n"+"Art2 "+res1+"\n"+"Art3 "+res2+"\n"+"\nIVA "+total1+"\n"+"IVA2 "+total2+"\n"+"IVA3 "+total3+"\n"+"\nTotal sin IVA  "+totalsiniva+"\n"+"TOTAL IVA "+totaliva+"\n"+"Total a pagar "+totaldesiva+"\n" );
-		     JOptionPane.showMessageDialog(null, "impriendo la i"+i);
+		     JOptionPane.showMessageDialog(null, "impriendo la i: "+i);
 		    if(i==0) {
 			    String cedcli,cedusu;
 			    long cc,cu;
@@ -164,6 +164,7 @@ public class PruebaVenta extends HttpServlet {
 			    VentaDAO vendao=new VentaDAO();
 			    ress=vendao.insertarventa(ven);
 			    JOptionPane.showMessageDialog(null, "Prueba 4");
+			    
 			    if(ress) {
 			    JOptionPane.showMessageDialog(null, "Venta registrada");
 			    int can;
@@ -232,9 +233,10 @@ public class PruebaVenta extends HttpServlet {
 			    	 JOptionPane.showMessageDialog(null, "No inserto cantidad");
 			     }
 			     
-			     
+			     JOptionPane.showMessageDialog(null, "Error en boton3"); 
 			     
 			    }
+			    
 			    else {
 			    	JOptionPane.showMessageDialog(null, "Venta NO registrada");
 			    	response.sendRedirect("PaginaVentas.jsp");
@@ -244,9 +246,9 @@ public class PruebaVenta extends HttpServlet {
 		    else {
 		    	JOptionPane.showMessageDialog(null, "Error en boton");  
 		    
-		}
+		}		    
 	}
 		
 	}
-
+	 
 }

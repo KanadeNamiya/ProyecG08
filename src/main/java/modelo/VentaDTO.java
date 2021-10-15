@@ -8,8 +8,6 @@ public class VentaDTO {
 	private double totalventa;
     private double valorventa;
     
-    
-	
        
     public VentaDTO(long cedulacliente, long Cedulausuario, double iva, double totalventa, double valorventa) {
     	super();
@@ -19,7 +17,16 @@ public class VentaDTO {
 		this.totalventa = totalventa;
 		this.valorventa = valorventa;
 	}
+    
+    public long getCodigoventa() {
+		return codigoventa;
+	}
 
+
+	public void setCodigoventa(long codigoventa) {
+		this.codigoventa = codigoventa;
+	}
+	
 
 	public VentaDTO( long codigoventa,long cedulacliente, long Cedulausuario, double iva, double totalventa,
 		double valorventa) {
@@ -33,14 +40,7 @@ public class VentaDTO {
 	}
 	
 	
-	public long getCodigoventa() {
-		return codigoventa;
-	}
-
-
-	public void setCodigoventa(long codigoventa) {
-		this.codigoventa = codigoventa;
-	}
+	
 
 
 	public long getCedulacliente() {

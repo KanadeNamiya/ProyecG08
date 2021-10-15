@@ -31,9 +31,9 @@
 	
 		
 		
-			<input type="text" name="cedulacliente" id="cedulacliente" value="${cliente.getCedulacliente() }" placeholder="cedula"/>
-			<input type="text" name="nombrecliente" id="nombrecliente" value="${cliente.getNombrecliente() }" placeholder="nombre">
-			<input type="submit" name="enviarcel" class="btninsu" value="Enviar">
+			<input type="text" name="cedulacliente" id="cedulacliente" value="${cliente.getCedulacliente() }" placeholder="cedula" required=""/>
+			<input type="text" name="nombrecliente" id="nombrecliente" value="${cliente.getNombrecliente() }" placeholder="nombre" >
+			<input type="submit" name="enviarcel" class="btninsu" value="Enviar" required="">
 	
 			
 <table>
@@ -49,7 +49,7 @@
 		     <td><input type="text" name="codigoproducto1" id="codigoproducto1" value="${cp.getCodproducto() }"  /></td>
 		     <td><input type="submit" name="consultarProducto1" class="btninsu" value="Consultar "></td>
 		     <td><input type="text" name="producto1" id="producto1" value="${cp.getNombrep() }" /></td>
-			 <td><input type="text" id="cantidad1" name="cantidad1"/></td>
+			 <td><input type="text" id="cantidad1" name="cantidad1" /></td>
 			 <td><input type="text" id="precioproducto1" value="${cp.getVenta()}" name="precioproducto1"/></td>
 		</tr>
 			

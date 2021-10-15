@@ -13,26 +13,26 @@ public class VentaDAO {
 	
 	conexion cn= new conexion();
 	Connection cnn=cn.conexionbd();
-	PreparedStatement ps;
-	ResultSet rs;
+	PreparedStatement ps=null;
+	ResultSet rs=null;
 	VentaDTO ven;
 	
 	
 	
-	public boolean insertarventa(VentaDTO us) {
+	public boolean insertarventa(VentaDTO ven) {
 		
 		boolean resultado=false;
 		try {
-			ps=cnn.prepareStatement("INSERT INTO ventas(cedula_cliente,cedula_usuario,ivaventa,total_venta,valor_venta) value(?,?,?,?,?)");
-			ps.setLong(1,us.getCedulacliente());
-			ps.setLong(2,us.getCedulausuario());
-			ps.setDouble(3,us.getIva());
-			ps.setDouble(4,us.getTotalventa());
-			ps.setDouble(5,us.getValorventa());
+			ps=cnn.prepareStatement("INSERT INTO ventas(cedula_cliente,cedula_usuario,ivaventa,total_venta,valor_venta) VALUE(?,?,?,?,?)");
+			ps.setLong(1,ven.getCedulacliente());
+			ps.setLong(2,ven.getCedulausuario());
+			ps.setDouble(3,ven.getIva());
+			ps.setDouble(4,ven.getTotalventa());
+			ps.setDouble(5,ven.getValorventa());
 			resultado=ps.executeUpdate()>0;
 			
 			}catch(SQLException ex){
-			 JOptionPane.showMessageDialog(null, "Error al Insertar" +ex);
+			 JOptionPane.showMessageDialog(null, "Error al Insertar: " +ex);
 			}
 			return resultado;
 			} 
