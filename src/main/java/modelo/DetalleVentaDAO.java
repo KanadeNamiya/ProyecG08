@@ -24,17 +24,17 @@ public class DetalleVentaDAO {
 		//usu=  buscarcliente(u);
 		//if(usu!=null) {
 			
-			ps =cnn.prepareStatement("Insert Into detalle_ventas(cantidad_producto,codigo_producto,codigo_venta,valor_venta,valor_iva, valor_total)   value(?,?,?,?,?,?);");
+			ps =cnn.prepareStatement("Insert Into detalle_ventas(cantidad_producto,codigo_producto,codigo_venta,valor_total,valor_venta,valoriva)   value(?,?,?,?,?,?);");
 			ps.setInt(1, det.getCantidadproducto());
 			ps.setLong(2, det.getCodigoproducto());
 			ps.setLong(3, det.getCodigoventa());
 			ps.setDouble(4, det.getValortotal());
-			ps.setDouble(5, det.getValoriva());
-		    ps.setDouble(6, det.getValortotal());
+			ps.setDouble(5, det.getValorventa());
+		    ps.setDouble(6, det.getValoriva());
 		resultado=ps.executeUpdate()>0;
 		//}
 		}catch(SQLException ex){
-		 JOptionPane.showMessageDialog(null, "Error al Insertar" +ex);
+		 JOptionPane.showMessageDialog(null, "Error al Insertar::" +ex);
 		}
 		return resultado;
 		}  	

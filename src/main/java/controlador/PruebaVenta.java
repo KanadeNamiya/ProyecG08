@@ -226,14 +226,14 @@ public class PruebaVenta extends HttpServlet {
 					    x=dedao.Inserta_Cliente(dd);
 					    if(x) {
 					    	JOptionPane.showMessageDialog(null, "detalle insertado");
-					    	response.sendRedirect("menuprincipal.jsp");
+					    	response.sendRedirect("PaginaInicio.jsp");
 					    }
 				 }
 			     else {
 			    	 JOptionPane.showMessageDialog(null, "No inserto cantidad");
 			     }
 			     
-			     JOptionPane.showMessageDialog(null, "Error en boton3"); 
+			     
 			     
 			    }
 			    
