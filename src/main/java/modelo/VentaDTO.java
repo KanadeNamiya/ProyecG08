@@ -7,14 +7,26 @@ public class VentaDTO {
 	private double iva;
 	private double totalventa;
     private double valorventa;
+    
+    
 	
        
-    public VentaDTO( long codigoventa,long cedulacliente, long cedulausuario, double iva, double totalventa,
+    public VentaDTO(long cedulacliente, long Cedulausuario, double iva, double totalventa, double valorventa) {
+    	super();
+		this.cedulacliente = cedulacliente;
+		cedulausuario = Cedulausuario;
+		this.iva = iva;
+		this.totalventa = totalventa;
+		this.valorventa = valorventa;
+	}
+
+
+	public VentaDTO( long codigoventa,long cedulacliente, long Cedulausuario, double iva, double totalventa,
 		double valorventa) {
-		
+		super();
 	    this.codigoventa=codigoventa;
 		this.cedulacliente = cedulacliente;
-		this.cedulausuario = cedulausuario;
+		cedulausuario = Cedulausuario;
 		this.iva = iva;
 		this.totalventa = totalventa;
 		this.valorventa = valorventa;
