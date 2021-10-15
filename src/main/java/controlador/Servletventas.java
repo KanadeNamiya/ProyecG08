@@ -80,6 +80,7 @@ public class Servletventas extends HttpServlet {
 			}
 			else {
 				JOptionPane.showMessageDialog(null,"No existen datos");
+				response.sendRedirect("PaginaVentas.jsp");
 			}
 		}
 		

@@ -1,3 +1,5 @@
+
+<%@page import="controlador.conexion"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -8,6 +10,9 @@
 <title>Iniciar sesion</title>
 </head>
 <body>
+<%
+conexion con=new conexion();
+%>
 <div class="mobile-screen">
   <div class="header">
     <h1>Iniciar sesion</h1>

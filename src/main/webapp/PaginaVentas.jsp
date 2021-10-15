@@ -34,6 +34,7 @@
 			<input type="number" id="cedulacliente" value="${vs.getCedulacliente() }" required="" name="cedulacliente"/>
 			<label class="labelestil" for="nombrecliente">Nombre:</label>
 			<input type="text" id="nombrecliente" value="${vs.getNombrecliente() }" name="nombrecliente">
+			<input type="hidden" name="codigo" value="${cedusu.getCedulausuario()}"  >
 			<input type="submit" name="enviarcel" class="btninsu" value="Enviar">
 	
 			

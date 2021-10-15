@@ -42,43 +42,29 @@ public class controladorlogin extends HttpServlet {
 		
 		HttpSession sesion=request.getSession();
 		
-		String u,c;
-		String password,usuario;
-		UsuariosDTO usudto;
-		UsuariosDAO usudao;
-		UsuariosDTO registro;
 		
-		
-		//salir
-		if(request.getParameter("btnsal")!=null) {
-			response.sendRedirect("Login.jsp");
 			
-			
-		}
 		//login
 		if(request.getParameter("BtnLoging")!=null) {
-		
-			u=request.getParameter("user");
-			c=request.getParameter("password");
-			if (u.equals("admininicial")&& c.equals("admin123456")) {
-				JOptionPane.showMessageDialog(null, "Bienvenido");
-				response.sendRedirect("PaginaInicio.jsp");
-			}
-			
-			else {
-				
-				usuario=request.getParameter("user");
-				password=request.getParameter("password");
-				usudto=new UsuariosDTO(usuario,password);
-				usudao=new UsuariosDAO();
-				registro=usudao.loginUno(usudto);
-				String uss=usudto.getNombreusuario();
-					if(registro!=null) {
-				response.sendRedirect("PaginaInicio.jsp");
+				String u,c;
+				UsuariosDTO usudto;
+				u=request.getParameter("user");
+				c=request.getParameter("password");
+				UsuariosDTO lo=new UsuariosDTO(u,c);
+				UsuariosDAO lodao=new UsuariosDAO();
+				usudto=lodao.loginUno(lo);
 				
 			
+					if(usudto.getUsuario().equals(u) && usudto.getPassword().equals(c)) {
 				
-				sesion.setAttribute("cu",usudto);
+						 JOptionPane.showMessageDialog(null, "Datos correctos");
+	                     String uss=usudto.getNombreusuario(); 
+	                     JOptionPane.showMessageDialog(null, uss);
+				
+				sesion.setAttribute("llevadato",uss);
+				sesion.setAttribute("cedusu",usudto);
+				request.getRequestDispatcher("PaginaInicio.jsp").forward(request, response);
+				//response.sendRedirect("PaginaInicio.jsp");
 					}
 				
 				else {
@@ -91,6 +77,12 @@ public class controladorlogin extends HttpServlet {
 			}
 			
 			
+			
+			
+		
+		
+		if(request.getParameter("btnsal")!=null) {
+			response.sendRedirect("Login.jsp");
 			
 			
 		}

@@ -86,13 +86,16 @@ public class UsuariosDAO {
 	}
 	
 	public UsuariosDTO loginUno(UsuariosDTO cod) {
+		
+		UsuariosDTO usdto=null;
+		
 		try {
 			ps=cnn.prepareStatement("SELECT * FROM usuarios WHERE password=? and usuario=?");
 			ps.setString(1, cod.getUsuario());	
 			ps.setString(2, cod.getPassword());
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				usdto=new UsuariosDTO(rs.getString(4), rs.getString(5));
+				usdto=new UsuariosDTO(rs.getLong(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
 			}
 			else {
 				return null;

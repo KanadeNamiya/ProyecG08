@@ -23,6 +23,14 @@
 	
 </header>
 <body>
+
+<%
+HttpSession objsesion=request.getSession();
+String nombre=(String)objsesion.getAttribute("llevadato");
+String nom=(String)objsesion.getAttribute("llevadat");
+%>
+<label><%=nombre%></label>
+<input type="hidden" name="codigo" value="${cedusu.getCedulausuario()}"  >
 <form>
 </form>
 
