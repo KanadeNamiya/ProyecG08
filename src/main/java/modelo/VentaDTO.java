@@ -7,7 +7,7 @@ public class VentaDTO {
 	private double iva;
 	private double totalventa;
     private double valorventa;
-    
+    private String nombrecliente;
        
     public VentaDTO(long cedulacliente, long Cedulausuario, double iva, double totalventa, double valorventa) {
     	super();
@@ -42,6 +42,21 @@ public class VentaDTO {
 	
 	
 
+
+	public VentaDTO(long cedulacliente, double totalventa, String nombrecliente) {
+		super();
+		this.cedulacliente = cedulacliente;
+		this.totalventa = totalventa;
+		this.nombrecliente = nombrecliente;
+	}
+
+	public String getNombrecliente() {
+		return nombrecliente;
+	}
+
+	public void setNombrecliente(String nombrecliente) {
+		this.nombrecliente = nombrecliente;
+	}
 
 	public long getCedulacliente() {
 		return cedulacliente;

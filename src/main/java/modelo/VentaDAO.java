@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -54,4 +55,20 @@ public class VentaDAO {
 		
 		return ven;
 	
-	}}
+	}
+	public ArrayList<VentaDTO> consultageneralv(){
+		ArrayList<VentaDTO>lista=new ArrayList<VentaDTO>();
+		try {
+			ps=cnn.prepareStatement("SELECT C.cedula_cliente,C.nombre_cliente,sum(total_venta) AS TotalVenta FROM ventas V JOIN clientes C ON V.cedula_cliente=C.cedula_cliente group by C.cedula_cliente,C.nombre_cliente");
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				ven=new VentaDTO(rs.getLong(1),rs.getLong(3),rs.getString(2));
+				lista.add(ven);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return lista;
+	}
+
+}

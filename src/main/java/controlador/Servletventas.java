@@ -1,6 +1,9 @@
 package controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,10 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
+import com.google.gson.Gson;
+
 import modelo.ClienteDAO;
 import modelo.ClienteDTO;
 import modelo.ProductoDAO;
 import modelo.ProductoDTO;
+import modelo.UsuariosDAO;
+import modelo.UsuariosDTO;
 import modelo.VentaDAO;
 import modelo.VentaDTO;
 
@@ -47,7 +54,7 @@ public class Servletventas extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession sesion=request.getSession();
-		 
+		PrintWriter out=response.getWriter();
 		long cedulacliente ;
 		String direccioncliente;
 		String emailcliente;
@@ -231,11 +238,18 @@ public class Servletventas extends HttpServlet {
 		}
 		
 	}
+
+	 ArrayList<VentaDTO>lista=new ArrayList<>();
+	 VentaDAO usudao=new VentaDAO();
+	 lista=usudao.consultageneralv();
+	 Gson gson=new Gson();
+	 out.print(gson.toJson(lista));
+		
 	
 	
 	
-	
-	}}
+	}
+	}
 	
 	
 	

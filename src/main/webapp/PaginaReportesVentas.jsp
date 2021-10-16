@@ -6,6 +6,8 @@
 <meta charset="ISO-8859-1">
 <link href="CSS/PaginaReportes.css" type="text/css" rel="stylesheet" />
 <title>Pagina Reportes</title>
+<script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="JS/consultarreportes.js"></script>
 </head>
 <header>
 <div class="animation start-home"><a href="PaginaInicio.jsp" class="nav-item">Volver</a></div>
@@ -24,12 +26,16 @@
 </header>
 <body>
 <form>
+<div>
 
-	<div  class="div">
-		<input type="submit" name="btnusu" class="btninsu" value="Listado de usuarios">
-		<input type="submit" name="btncli" class="btninsu" value="Listado de clientes">
-		<input type="submit" name="btnvent" class="btninsu" value="Listado de ventas">
-	</div>
+            <label class="labelestil" for="cedula">Cedula:</label>
+			<input type="text" id="cedula" value="" name="cedula">
+			<input type="button" id="botonventa" name="botonventa" class="botonventa" value="consultar">
+</div>
+<table id="tab" border="1">
+
+</table>
+
 </form>
 
 </body>

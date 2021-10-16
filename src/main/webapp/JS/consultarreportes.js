@@ -73,5 +73,36 @@ $.ajax({
   }
 });
 }
+
+	$(".botonventa").on("click",function(){
+	consultageneralv();	
+	});
+	
+function consultageneralv(){
+$.ajax({
+  url: "Servletventas",
+  type:"POST",
+  dataType:"json",
+  success: function( result ) {
+    console.log(result);
+	let tabla=document.querySelector('#tab');
+	console.log(tabla);
+	tabla.innerHTML="";
+	tabla.innerHTML=`<caption>Lista de ventas</caption>
+	<tr>
+						<th>Cedula</th>
+						<th>Nombre</th>
+						<th>Valor total factura</th>
+						</tr>`
+	
+	for(let i of result){
+		tabla.innerHTML+=`<tr><th>${i.cedulacliente}</th>
+							<th>${i.nombrecliente}</th>
+							<th>${i.TotalVenta}</th>
+							</tr>`
+	}
+  }
+});
+}
 	
 });
