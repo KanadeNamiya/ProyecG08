@@ -59,7 +59,7 @@ public class VentaDAO {
 	public ArrayList<VentaDTO> consultageneralv(){
 		ArrayList<VentaDTO>lista=new ArrayList<VentaDTO>();
 		try {
-			ps=cnn.prepareStatement("SELECT C.cedula_cliente,C.nombre_cliente,sum(total_venta) AS TotalVenta FROM ventas V JOIN clientes C ON V.cedula_cliente=C.cedula_cliente group by C.cedula_cliente,C.nombre_cliente");
+			ps=cnn.prepareStatement("SELECT C.cedula_cliente,C.nombre_cliente,sum(total_venta) AS totalventa FROM ventas V JOIN clientes C ON V.cedula_cliente=C.cedula_cliente group by C.cedula_cliente,C.nombre_cliente;");
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				ven=new VentaDTO(rs.getLong(1),rs.getLong(3),rs.getString(2));

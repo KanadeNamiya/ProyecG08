@@ -98,11 +98,24 @@ $.ajax({
 	for(let i of result){
 		tabla.innerHTML+=`<tr><th>${i.cedulacliente}</th>
 							<th>${i.nombrecliente}</th>
-							<th>${i.TotalVenta}</th>
+							<th>${i.totalventa}</th>
 							</tr>`
+	};
+	
+	var totalSum = 0;
+	i=0;
+	for (let i of result){
+		totalSum = i.totalventa+totalSum
 	}
+	tabla.innerHTML+=`<span>Total: ${totalSum}</span>`
+
+	
+	
+	
   }
 });
 }
+
+
 	
 });

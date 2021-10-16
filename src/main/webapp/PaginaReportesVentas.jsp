@@ -20,7 +20,7 @@
 		<a href="PaginaVentas.jsp" class="nav-item">Ventas</a>
 		<a href="PaginaReportes.jsp" class="nav-item">Reportes</a>
 		
-		<div class="animation start-home"></div>v>
+		<div class="animation start-home"></div>
 	</nav>	
 	
 </header>
@@ -28,12 +28,9 @@
 <form>
 <div>
 
-            <label class="labelestil" for="cedula">Cedula:</label>
-			<input type="text" id="cedula" value="" name="cedula">
 			<input type="button" id="botonventa" name="botonventa" class="botonventa" value="consultar">
 </div>
 <table id="tab" border="1">
-
 </table>
 
 </form>

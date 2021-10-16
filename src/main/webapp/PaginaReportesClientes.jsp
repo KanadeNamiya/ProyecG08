@@ -28,8 +28,6 @@
 <form>
 <div>
 
-            <label class="labelestil" for="cedula">Cedula:</label>
-			<input type="text" id="cedula" value="" name="cedula">
 			<input type="button" id="btncli" name="btncli" class="btncli" value="consultar">
 </div>
 <table id="tab" border="1">
