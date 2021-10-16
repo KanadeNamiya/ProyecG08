@@ -107,7 +107,10 @@ $.ajax({
 	for (let i of result){
 		totalSum = i.totalventa+totalSum
 	}
-	tabla.innerHTML+=`<span>Total: ${totalSum}</span>`
+	tabla.innerHTML+=`<tr><th></th>
+						  <th>Total:</th>
+						  <th>${totalSum}</th>
+	</tr>`
 
 	
 	
